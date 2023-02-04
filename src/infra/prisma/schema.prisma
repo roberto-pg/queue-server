@@ -1,0 +1,35 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model Queue {
+  id           String   @id @default(uuid())
+  title        String
+  abbreviation String
+  priority     Int
+  tickets      Ticket[]
+
+  @@map("queues")
+}
+
+model Ticket {
+  id            String   @id @default(uuid())
+  position      Int
+  timestamp     DateTime
+  status        String
+  queue_id      String
+  queue_abb     String
+  service_desk  Int?
+  call_sequence Int?
+  queue         Queue    @relation(fields: [queue_id], references: [id], onDelete: NoAction, onUpdate: NoAction)
+
+  @@map("tickets")
+}
