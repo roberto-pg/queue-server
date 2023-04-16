@@ -16,15 +16,15 @@
 <h3>Clone the repository: </h3>
 
 ```
-git clone https://github.com/roberto-pg/queue-back.git
+git clone https://github.com/roberto-pg/queue-back.git queue
 ```
 
 ```
-cd queue-back
+cd queue
 ```
 
 ```
-yarn
+npm install
 ```
 
 ```
@@ -97,7 +97,7 @@ docker restart queue-api
 <h3>Run Prisma Migrations at the root of the project:</h3>
 
 ```
-yarn prisma migrate dev
+npx prisma migrate dev --name init
 ```
 
 <br/>
