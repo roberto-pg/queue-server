@@ -74,30 +74,22 @@ docker ps -a
 ```
 
 <br/>
-<h3>To run migrations you have to find out the address of the care-postgres container on the Docker network:</h3>
+<h3>To run the migrations the easiest way is to enter the node container:</h3>
 
 ```
-docker network ls
+docker exec -it queue sh
 ```
-
-```
-docker network inspect <network id>
-```
-
 <br/>
-<h3>Change the DATABASE_URL in the .env file, replace the container_name with the IPv4 address of the postgres container. For example: "172.18.0.3".</h3>
-
-<br/>
-<h3>Restart the container with the changes:</h3>
-
-```
-docker restart queue-api
-```
-
-<h3>Run Prisma Migrations at the root of the project:</h3>
+<h3>Inside the container, run this command:</h3>
 
 ```
 npx prisma migrate dev --name init
+```
+
+<h3>Exit the container:</h3>
+
+```
+Ctrl + D
 ```
 
 <br/>
