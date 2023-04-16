@@ -1,12 +1,12 @@
 version: '3'
 
 networks:
-  queue:
+  queue-net:
     driver: bridge
 
 services:
   postgres:
-    image: bitnami/postgresql:latest
+    image: bitnami/postgresql:15.2.0@sha256:2647d1d05cd48fa494c39a8d717984a5d77590e08967cb2762a6febe2e428643
     container_name: queue-db
     restart: always
     environment:
@@ -15,17 +15,17 @@ services:
       - POSTGRESQL_USERNAME=${DB_USER}
       - POSTGRESQL_PASSWORD=${DB_PASS}
     networks:
-      - queue
+      - queue-net
 
   app:
-    image: node:current-alpine
-    container_name: queue-api
+    image: node:lts-alpine@sha256:51e341881c2b77e52778921c685e711a186a71b8c6f62ff2edfc6b6950225a2f
+    container_name: queue
     ports:
       - '3339:3339'
     working_dir: /usr/app
     volumes:
       - .:/usr/app
-    command: sh -c "yarn && yarn build && yarn start"
+    command: sh -c "npm run start"
     restart: always
     networks:
-      - queue
+      - queue-net 
