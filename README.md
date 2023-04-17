@@ -24,7 +24,7 @@ cd queue
 ```
 
 ```
-npm install
+npm install --production
 ```
 
 ```
