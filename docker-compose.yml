@@ -25,7 +25,7 @@ services:
     working_dir: /usr/app
     volumes:
       - .:/usr/app
-    command: sh -c "npm run start"
+    command: sh -c "npm start"
     restart: always
     networks:
       - queue-net 
