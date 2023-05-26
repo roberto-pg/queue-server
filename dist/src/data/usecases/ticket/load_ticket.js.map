@@ -1,0 +1,1 @@
+{"version":3,"file":"load_ticket.js","sourceRoot":"","sources":["../../../../../src/data/usecases/ticket/load_ticket.ts"],"names":[],"mappings":";;;AAIA,MAAa,sBAAsB;IACjC,YAA6B,gBAAkC;QAAlC,qBAAgB,GAAhB,gBAAgB,CAAkB;IAAG,CAAC;IAEnE,KAAK,CAAC,IAAI;QACR,MAAM,OAAO,GAAG,MAAM,IAAI,CAAC,gBAAgB,CAAC,WAAW,EAAE,CAAA;QAEzD,OAAO,OAAO,CAAA;IAChB,CAAC;CACF;AARD,wDAQC"}

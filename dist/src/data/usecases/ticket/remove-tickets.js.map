@@ -1,0 +1,1 @@
+{"version":3,"file":"remove-tickets.js","sourceRoot":"","sources":["../../../../../src/data/usecases/ticket/remove-tickets.ts"],"names":[],"mappings":";;;AAGA,MAAa,wBAAwB;IACnC,YAA6B,gBAAkC;QAAlC,qBAAgB,GAAhB,gBAAgB,CAAkB;IAAG,CAAC;IAEnE,KAAK,CAAC,IAAI;QACR,MAAM,MAAM,GAAG,MAAM,IAAI,CAAC,gBAAgB,CAAC,aAAa,EAAE,CAAA;QAC1D,OAAO,MAAM,CAAA;IACf,CAAC;CACF;AAPD,4DAOC"}

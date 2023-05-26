@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "ts-node-dev -r tsconfig-paths/register --exit-child --transpile-only --ignore-watch node_modules src/main/app.ts",
     "build": "tsc -p tsconfig.build.json",
-    "start": "tsc -p tsconfig.build.json && node dist/src/main/app.js"
+    "start": "node dist/src/main/app.js"
   },
   "dependencies": {
     "@prisma/client": "^4.9.0",
